@@ -10,5 +10,17 @@
     <string name="checkBox">CheckBox</string>
     <string name="radioButton">Radio Button</string>
 
+    <string name="loginButton">Login</string>
+
+    <string name="dialog_message">Do you want to finish the activity?</string>
+    <string name="dialog_title">Finish Activity</string>
+    <string name="ok">Yes</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="list_items_activity_response">Here is my response</string>
+
+    <string name="switchON">Switch is On</string>
+    <string name="switchOFF">Switch is Off</string>
+
 
 </resources>
