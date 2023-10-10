@@ -1,11 +1,13 @@
 package com.example.androidassignments;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -20,6 +22,7 @@ import android.app.Activity;
 import android.widget.CheckBox;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+
 
 
 public class ListItemsActivity extends AppCompatActivity {
@@ -38,6 +41,11 @@ public class ListItemsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list_items);
 
         imageButton = findViewById(R.id.cameraButton);
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
 
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,7 +115,6 @@ public class ListItemsActivity extends AppCompatActivity {
 
 
 
-
         Log.d(TAG, "onCreate");
     }
 
@@ -165,6 +172,16 @@ public class ListItemsActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(Bundle outState) {
         super.onRestoreInstanceState(outState);
         Log.d(TAG, "onRestoreInstanceState");
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 }

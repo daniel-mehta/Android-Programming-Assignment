@@ -23,4 +23,15 @@
 
     <string name="switchON">Switch is On</string>
     <string name="switchOFF">Switch is Off</string>
+
+    <string name="startChat">Start Chat</string>
+
+    <string name="sendButtonText">SEND</string>
+
+    <string name="outgoing_symbol_description">Outgoing call symbol</string>
+    <string name="incoming_symbol_description">Incoming message symbol</string>
+
+    <string name="newText">New Text</string>
+
+
 </resources> 
